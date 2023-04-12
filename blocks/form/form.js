@@ -34,7 +34,8 @@ function createSelect(fd) {
   
   async function submitForm(form) {
     const payload = constructPayload(form);
-    const resp = await fetch(form.dataset.action, {
+    //const resp = await fetch(form.dataset.action, {
+    const resp = await fetch('https://main--learnhlx--seejanjoseph.hlx.page/form1', {
       method: 'POST',
       cache: 'no-cache',
       headers: {
@@ -136,7 +137,9 @@ function createSelect(fd) {
     const rules = [];
     // eslint-disable-next-line prefer-destructuring
     form.dataset.action = pathname.split('.json')[0];
+    console.log(json.data);
     json.data.forEach((fd) => {
+        console.log(fd);
       fd.Type = fd.Type || 'text';
       const fieldWrapper = document.createElement('div');
       const style = fd.Style ? ` form-${fd.Style}` : '';
@@ -185,7 +188,9 @@ function createSelect(fd) {
   }
   
   export default async function decorate(block) {
+    
     const form = block.querySelector('a[href$=".json"]');
+    console.log(form.href);
     if (form) {
       form.replaceWith(await createForm(form.href));
     }
