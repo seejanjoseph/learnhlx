@@ -1,0 +1,31 @@
+.writer-details {
+    background-color: blanchedalmond;
+}
+
+.writer-details.block>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.writer-details.block div div {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.writer-details.block .avatar {
+    border-radius: 50%;
+    width: 50px;
+    height:  50px;
+}
+
+@media (min-width: 900px) {
+    .writer-details.block>div {
+        flex-direction: row;
+    }
+
+    .writer-details.block div div {
+        text-align: center;
+    }
+}
