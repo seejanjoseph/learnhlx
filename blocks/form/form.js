@@ -137,9 +137,8 @@ function createSelect(fd) {
     const rules = [];
     // eslint-disable-next-line prefer-destructuring
     form.dataset.action = pathname.split('.json')[0];
-    console.log(json.data);
+
     json.data.forEach((fd) => {
-        console.log(fd);
       fd.Type = fd.Type || 'text';
       const fieldWrapper = document.createElement('div');
       const style = fd.Style ? ` form-${fd.Style}` : '';

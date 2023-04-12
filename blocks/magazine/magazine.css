@@ -1,3 +1,6 @@
-.magazine {
-    background-color: aquamarine;
+.magazine >div>div{
+    display: flex;
+}
+.magazine .button-container {
+    margin: 0px 10px;
 }
