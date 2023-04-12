@@ -34,8 +34,8 @@ function createSelect(fd) {
   
   async function submitForm(form) {
     const payload = constructPayload(form);
-    //const resp = await fetch(form.dataset.action, {
-    const resp = await fetch('https://main--learnhlx--seejanjoseph.hlx.page/form1', {
+    const resp = await fetch(form.dataset.action, {
+    //const resp = await fetch('https://main--learnhlx--seejanjoseph.hlx.page/form1', 
       method: 'POST',
       cache: 'no-cache',
       headers: {
